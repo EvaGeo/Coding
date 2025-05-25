@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'horizon'; 
+    src: url('fonts/horizon.otf') format('opentype');
+
+}
+
+
+html, body {
+    background-color: black;    
+    margin: 0;
+       padding: 0;
+      
+       height: 100vh;
+       width: 100vw;
+   }
+
+   h1 {
+    margin: 35px;
+    font-family: 'horizon', serif;
+    font-size: 100pt;
+    color: red;
+    text-align: center;
+ 
+}
+
+h2 {
+   
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 18pt;
+    color: red;
+    text-align: center;
+    font-style:  italic;
+ 
+}
+
+p {
+    margin-top: 200px;
+    font-size: 18pt;
+    font-family: serif;
+    color: red;
+    text-align: left;
+    margin-left: 40vh;
+    margin-right: 40vh;
+
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;  /* Distance from the top of the page */
+    left: 20px; /* Distance from the left side of the page */
+    font-size: 30px;  /* Size of the arrow */
+    color: red;  /* Red color for the arrow */
+    text-decoration: none; /* Remove underline */
+    background-color: transparent;
+    padding: 10px; /* Add some padding around the button */
+    border-radius: 50%; /* Make the button round */
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    font-size: 31px;
+  }
+
+  .fading-border-left,
+  .fading-border-right {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      width: 0; 
+      z-index: 0;
+      pointer-events: none;
+      animation-duration: 180s;
+      animation-fill-mode: forwards;
+  }
+  
+  .fading-border-left {
+      left: 0;
+      background: linear-gradient(to right, red, transparent);
+      animation-name: grow-left;
+  }
+  
+  .fading-border-right {
+      right: 0;
+      background: linear-gradient(to left, red, transparent);
+      animation-name: grow-right;
+  }
+  
+  
+  @keyframes grow-left {
+      from { width: 0; }
+      to { width: 100%; } 
+  }
+  
+  @keyframes grow-right {
+      from { width: 0; }
+      to { width: 100%; }
+  }
+  
+  .highlight-red {
+      color: red;
+    }
+
+
+h3{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    font-size: 12pt;
+    font-family: serif;
+    font-weight:normal;
+    color: red;
+    text-align: left;
+    padding-left: 60vh;
+    padding-right: 60vh;
+    padding-bottom: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .chapter {
+    height: 100vh; /* each chapter fills the screen */
+    padding: 4rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .arrow {
+    position:relative;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    text-decoration: none;
+    color: red;
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow:hover {
+    transform: translateX(-50%) translateY(5px);
+  }

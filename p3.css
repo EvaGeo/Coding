@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'horizon'; 
+    src: url('fonts/horizon.otf') format('opentype');
+
+}
+
+
+html, body {
+    background-color: black;    
+   
+   }
+
+   h1 {
+    margin: 25px;
+    font-family: 'horizon', serif;
+    font-size: 100pt;
+    color: red;
+    text-align: center;
+ 
+}
+
+pe {
+    margin-left: 60vh;
+    margin-right: 65vh;
+    margin-bottom: 40px;
+    font-size: 18pt;
+    font-family: serif;
+    color: red;
+    text-align: left;
+    display: flex;
+}
+
+pi {
+    margin-left: 110vh;
+    margin-right: 40vh;
+    margin-bottom: 40px;
+    font-size: 18pt;
+    font-family: serif;
+    color: red;
+    text-align: left;
+    display: flex;
+    font-style: italic;
+}
+
+pm {
+    margin-left: 40vh;
+    margin-right: 80vh;
+    margin-bottom: 40px;
+    display: flex;
+    font-size: 18pt;
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+    text-align: left;
+    font-style:  italic;
+    font-weight: bold;
+}
+
+
+p1 {
+    margin-left: 40vh;
+    margin-right: 40vh;
+    font-size: 18pt;
+    font-family: serif;
+    color: red;
+    text-align: center;
+    text-align: justify;
+    display: flex;
+    padding-left: 10px;
+}
+
+h2 {
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 18pt;
+    color: red;
+    text-align: center;
+    margin-bottom: 200px;
+    font-style:  italic;
+ 
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;  
+    left: 20px; 
+    font-size: 30px;  
+    color: red;  
+    text-decoration: none; 
+    background-color: transparent;
+    padding: 10px; 
+    border-radius: 50%; 
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    font-size: 31px;
+  }
+
+
+.fading-border-left,
+.fading-border-right {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 0; 
+    z-index: 0;
+    pointer-events: none;
+    animation-duration: 180s;
+    animation-fill-mode: forwards;
+}
+
+.fading-border-left {
+    left: 0;
+    background: linear-gradient(to right, red, transparent);
+    animation-name: grow-left;
+}
+
+.fading-border-right {
+    right: 0;
+    background: linear-gradient(to left, red, transparent);
+    animation-name: grow-right;
+}
+
+
+@keyframes grow-left {
+    from { width: 0; }
+    to { width: 100%; } 
+}
+
+@keyframes grow-right {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.highlight-red {
+    color: red;
+  }

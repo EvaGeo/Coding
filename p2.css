@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'horizon'; 
+  src: url('fonts/horizon.otf') format('opentype');
+
+}
+
+
+body {
+    background-color: black;   } 
+    
+  
+  .gallery img {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    border-image-width: 0px;
+    display: block; 
+    overflow-x: hidden;
+    object-fit: fill;
+  }
+
+  p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18pt;
+    color: red;
+    text-decoration: underline;
+    text-align: center;
+    margin: 3.3rem 0;}
+
+    h1 {
+    margin: 25px;
+    font-family: 'horizon', serif;
+    font-size: 100pt;
+    color: red;
+    text-align: center;}
+  
+    
+
+    h2 {
+      margin-bottom: 50px;
+      margin-top: 350px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: normal;
+      font-size: 18pt;
+      color: red;
+      text-align: center;
+      font-style: italic;
+   
+  }
+
+.back-button {
+    position: fixed;
+    top: 20px;  
+    left: 20px; 
+    font-size: 30px;  
+    color: red;  
+    text-decoration: none; 
+    background-color: transparent;
+    padding: 10px; 
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    font-size: 31px;
+  }
+
+  .fading-border-left,
+  .fading-border-right {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      width: 0; 
+      z-index: 0;
+      pointer-events: none;
+      animation-duration: 180s;
+      animation-fill-mode: forwards;
+  }
+  
+  .fading-border-left {
+      left: 0;
+      background: linear-gradient(to right, red, transparent);
+      animation-name: grow-left;
+  }
+  
+  .fading-border-right {
+      right: 0;
+      background: linear-gradient(to left, red, transparent);
+      animation-name: grow-right;
+  }
+  
+  
+  @keyframes grow-left {
+      from { width: 0; }
+      to { width: 100%; } 
+  }
+  
+  @keyframes grow-right {
+      from { width: 0; }
+      to { width: 100%; }
+  }
+  
+  .highlight-red {
+      color: red;
+    }
+
+

@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'horizon'; 
+    src: url('fonts/horizon.otf') format('opentype');
+
+}
+
+.title-container {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;}
+
+.tooltip {
+        visibility: hidden;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%; /* position above */
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        white-space: nowrap;
+    }
+
+    .title-container:hover .tooltip {
+        visibility: visible;
+        opacity: 1;}
+  
+
+.button-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.nav-button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 18pt;
+    color: red;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    font-size: 18pt;
+    color: red;
+    text-decoration: underline;
+}
+
+h1 {
+
+    font-family: 'horizon', serif;
+    font-size: 100pt;
+    color: red;
+    text-align: center;
+    
+
+}
+
+p {
+    margin-top: 390px;
+    font-size: 18pt;
+    font-family: serif;
+    color: red;
+    text-align: center;
+}
+
+html, body {
+ background-color: black;    
+ margin: 0;
+    padding: 0;
+    overflow: hidden; /* prevents scrollbars */
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+.fading-border-left,
+.fading-border-right {
+    position: fixed;
+    top: 0;
+    width: 60px; /* adjust thickness */
+    height: 100vh;
+    z-index: 0; /* put behind content */
+    pointer-events: none; /* ensure clicks go through */
+}
+
+.fading-border-left {
+    left: 0;
+    background: linear-gradient(to right, red, transparent);
+}
+
+.fading-border-right {
+    right: 0;
+    background: linear-gradient(to left, red, transparent);
+}
+
+.flicker {
+    animation: flicker 0.1s infinite alternate;
+  }
+  
+  @keyframes flicker {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
